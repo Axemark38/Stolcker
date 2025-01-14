@@ -1,11 +1,4 @@
 // This code executes in its own worker or thread
-self.addEventListener("install", event => {
-   console.log("Service worker installed");
-});
-self.addEventListener("activate", event => {
-   console.log("Service worker activated");
-});
-
 async function fetchTest(){
     try {
         
@@ -15,4 +8,10 @@ async function fetchTest(){
         
     } catch (error){console.log(error)}
 }
-fetchTest();
+self.addEventListener("install", event => {
+   console.log("Service worker installed");
+});
+self.addEventListener("activate", event => {
+   console.log("Service worker activated");
+   fetchTest();
+});
