@@ -7,7 +7,7 @@ async function fetchTest(){
         console.log(`Response status: ${res.status}`);
         
     } catch (error){console.log(error)}
-}
+};
 self.addEventListener("install", event => {
    console.log("Service worker installed");
 });
