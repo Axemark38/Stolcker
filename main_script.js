@@ -1,4 +1,4 @@
-navigator.serviceWorker.register("/Stolcker/serviceWorker.js");
+navigator.serviceWorker.register("./serviceWorker.js");
 
 const fetchButton = document.getElementById("fetch");
 fetchButton.addEventListener("click", async () => {
