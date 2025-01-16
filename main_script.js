@@ -2,8 +2,7 @@ const fetchButton = document.getElementById("fetch");
 fetchButton.addEventListener("click", async () => {
     const response = await fetch("https://videogamesplus.ca", {
       headers: {
-        "Origin": "https://axemark38.github.io",
-        "Access-Control-Allow-Origin": "*"
+        "Content-Security-Policy": "connect-src https:";
       }});
-    alert(response.status);
+    console.log(response.status);
 })
