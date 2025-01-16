@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="manifest" href="manifest.json"/>
+  <title>Fetch External Page</title>
 </head>
 <body>
-  Nothing to see here. For now...
+  <h1>External Page Content</h1>
+  <div id="content">Loading...</div>
+
+  <script>
+    fetch('https://videogamesplus.ca')
+      .then(response => response.status)
+      .then(status => console.log(status))
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  </script>
 </body>
-</html> 
+</html>
